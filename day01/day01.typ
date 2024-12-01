@@ -1,8 +1,6 @@
 #import "../shared/aoc.typ": *
 
 #{
-  import calc: max, min
-
   let inputNums = read("input.txt")
     .trim().split("\n")
     .map(line => line.split(whitespace).map(int))
@@ -13,11 +11,9 @@
   // part 1
   let sortedNums = leftSide.zip(rightSide)
   let distances = sortedNums.map(p => calc.abs(p.at(0) - p.at(1)))
-  let sumDistances = distances.sum()
 
   // part 2
   let similarityScores = leftSide.map(n => n * rightSide.filter(r => r == n).len())
-  let sumSimilarityScores = similarityScores.sum()
   
   // visualization
 
@@ -45,7 +41,7 @@
         ]
       )
 
-      $arrow.cw.half$ The sum of all distances is #result(sumDistances).
+      $arrow.cw.half$ The sum of all distances is #result(distances.sum()).
     ],
     part2: [
       Next, we calculate the similarity score for each number on the left side. \
@@ -64,7 +60,7 @@
         ]
       )
 
-      $arrow.cw.half$ The sum of all similarity scores is #result(sumSimilarityScores).
+      $arrow.cw.half$ The sum of all similarity scores is #result(similarityScores.sum()).
     ]
   )
 }
