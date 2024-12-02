@@ -48,7 +48,8 @@
   #part2
 ]
 
-#let whitespace = regex("\\s+")
+#let newlineRegex = regex("\\r?\\n")
+#let whitespaceRegex = regex("\\s+")
 
 #let followsArrow = align(horizon)[
   #text(size: 1.2em)[

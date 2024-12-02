@@ -2,8 +2,8 @@
 
 #{
   let inputNums = read("input.txt")
-    .trim().split("\n")
-    .map(line => line.split(whitespace).map(int))
+    .trim().split(newlineRegex)
+    .map(line => line.split(whitespaceRegex).map(int))
 
   let leftSide = inputNums.map(l => l.at(0)).sorted()
   let rightSide = inputNums.map(l => l.at(1)).sorted()
