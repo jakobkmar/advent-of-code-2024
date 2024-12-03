@@ -23,23 +23,26 @@
       First, we sort the number columns on the left side and the right side of each pair. \
       Then, we calculate the distance between the two numbers in each pair.
 
-      #grid(
-        columns: 5, gutter: 2em,
-        [
-          *Parsed Number Pairs* \
-          #inputNums
-        ],
-        followsArrow,
-        [
-          *Sorted Number Pairs* \
-          #sortedNums
-        ],
-        followsArrow,
-        [
-          *Calculated Distances* \
-          #distances
-        ]
-      )
+      #[
+        #set text(size: 0.8em)
+        #grid(
+          columns: 5, gutter: 2em,
+          [
+            *Parsed Number Pairs* \
+            #inputNums
+          ],
+          followsArrow,
+          [
+            *Sorted Number Pairs* \
+            #sortedNums
+          ],
+          followsArrow,
+          [
+            *Calculated Distances* \
+            #distances
+          ]
+        )
+      ]
 
       $arrow.cw.half$ The sum of all distances is #result(distances.sum()).
     ],
@@ -47,18 +50,22 @@
       Next, we calculate the similarity score for each number on the left side. \
       The similarity score is the product of the number and the count of the number on the right side.
 
-      #grid(
-        columns: 3, gutter: 2em,
-        [
-          *Parsed Number Pairs* \
-          #inputNums
-        ],
-        followsArrow,
-        [
-          *Similarity Scores* \
-          #similarityScores
-        ]
-      )
+      #[
+        #set text(size: 0.8em)
+        #grid(
+          columns: 3, gutter: 2em,
+          [
+            *Parsed Number Pairs* \
+            #inputNums
+          ],
+          followsArrow,
+          [
+            *Similarity Scores* \
+            #similarityScores
+          ]
+        )
+      ]
+
 
       $arrow.cw.half$ The sum of all similarity scores is #result(similarityScores.sum()).
     ]

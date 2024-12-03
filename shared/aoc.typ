@@ -4,7 +4,7 @@
   part2: content,
 ) = [
   #set page(paper: "a4", height: auto, margin: 1.5cm)
-  #set text(size: 0.8em)
+  #set text(size: 1em)
 
   #show heading.where(level: 1): it => {
     set text(size: 1.1em)
