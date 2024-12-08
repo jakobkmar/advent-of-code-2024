@@ -11,7 +11,7 @@ def get_operator_results(ints):
     for r in get_operator_results(ints[:-1]):
         results.append(ints[-1] + r)
         results.append(ints[-1] * r)
-        results.append(int(str(r) + str(ints[-1])))
+        results.append(int(str(r) + str(ints[-1]))) # part 2
     return results
 
 total_calibration_result = 0
