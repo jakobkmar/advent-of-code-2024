@@ -25,7 +25,7 @@
   // visualization
 
   aoc(
-    day: 2,
+    day: 3,
     part1: [
       First, read the program.
       
